@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "Makefile": "make",
+        "registers.h": "c"
+    }
+}

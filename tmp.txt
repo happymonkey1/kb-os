@@ -1,0 +1,54 @@
+section .text
+bits 32         ; boot into protected mode (32 bit mode)
+start:
+    ; map first PTD entry to PT table
+    mov eax, pt_table
+    ; set metadata for present + writable
+    or eax, 0b11 
+    ; access zeroth entry in the ptd_table, and copy to eax register
+    mov dword [ptd_table + 0], eax
+
+    ; map each P1 entry to a 4KB page
+    mov ecx, 0                      ; counter variable
+
+.map_pt_table:
+    ; map ecx-th PT entry to a huge page that starts at address 4KB*ecx
+    mov eax, 0x1000                 ; 4KB
+    mul ecx                         ; start address of ecx-th page
+    or eax, 0b00000011              ; present + writable
+    mov [pt_table + ecx * 4], eax   ; map ecx-th entry
+
+    inc ecx                         ; increment counter
+    cmp ecx, 1024                   ; if counter == 1024, we have mapped the whole p1 table
+    jne .map_pt_table               ; else, map the next entry
+
+    ; move page table address to cr3 register (special register for paging)
+    mov eax, ptd_table
+    ; since cr3 (control register 3) is a special register, it can only be moved
+    ; into from another table
+    mov cr3, eax
+
+    ; enable paging
+    mov eax, cr0
+    ; bit 31 set means paging?
+    or eax, 1 << 31
+    mov cr0, eax
+
+    ; tell hardware about our GDT
+    lgdt [gdt_descriptor]
+
+    ; ensure that all segment registers are initialized correctly
+    ; load 0 into all data segment registers
+    mov ax, DATA_SEG
+    mov ss, ax
+    mov ds, ax
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+stack_top:
+    mov ebx, MSG_32BIT_MODE
+    call print32
+    call KERNEL_OFFSET
+    ; mov esp, stack_bottom
+    ; call main
+    jmp $

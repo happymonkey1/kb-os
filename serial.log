@@ -1,0 +1,65 @@
+serial driver initialized.
+initialized vga driver.
+starting to install isrs.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+finished installing isrs.
+starting PIC remapping.
+finished PIC remapping.
+setting up irq handlers.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+idt gate set.
+finished setting up irq handlers.
+loading idt.
+finished loading idt.
+initialized interrupt service routines.
+enabled external interrupts.
+registered interrupt handler.
+registered irq1 handler for keyboard callback
+initialized keyboard driver.
+welcome to kbOS.
+testing interrupts.
