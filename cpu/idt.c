@@ -8,8 +8,8 @@
 #define HIGH_16(address) (uint16_t)(((address) >> 16) & 0xFFFF)
 
 #define IDT_ENTRIES 256
-idt_gate_t idt[IDT_ENTRIES] = { 0 };
-idt_register_t idt_register = { 0 };
+idt_gate_t idt[IDT_ENTRIES];
+idt_register_t idt_register;
 
 // register a handler for interrupt n
 void set_idt_gate(int n, uint32_t handler)

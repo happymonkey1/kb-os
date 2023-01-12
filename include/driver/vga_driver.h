@@ -3,6 +3,8 @@
 
 #include "port.h"
 
+#include <stdint.h>
+
 void set_cursor(int offset);
 int get_cursor();
 
@@ -16,7 +18,7 @@ int get_offset(int col, int row);
 int move_offset_to_new_line(int offset);
 
 // copy num_bytes bytes from source to dest
-void memory_copy(const char* source, char* dest, const int num_bytes);
+void memory_copy(uint8_t* source, uint8_t* dest, const int num_bytes);
 
 int scroll_line(int offset);
 void clear_screen();

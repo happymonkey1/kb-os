@@ -2,6 +2,6 @@
 #define CONSOLE_H
 
 void uartinit(void);
-void serial_print_string(char*);
+void serial_print_string(const char*);
 
 #endif

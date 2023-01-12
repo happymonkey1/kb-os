@@ -82,7 +82,7 @@ int move_offset_to_new_line(int offset)
     return get_offset(0, get_row_from_offset(offset) + 1);
 }
 
-void memory_copy(const char* source, char* dest, const int num_bytes)
+void memory_copy(uint8_t* source, uint8_t* dest, const int num_bytes)
 {
     int i;
     for (i = 0; i < num_bytes; ++i)
@@ -91,8 +91,8 @@ void memory_copy(const char* source, char* dest, const int num_bytes)
 
 int scroll_line(int offset)
 {
-    const char* source = (char*)(get_offset(0, 1) + VIDEO_ADDR);
-    char* dest = (char*)(get_offset(0, 0) + VIDEO_ADDR);
+    uint8_t* source = (uint8_t*)(get_offset(0, 1) + VIDEO_ADDR);
+    uint8_t* dest = (uint8_t*)(get_offset(0, 0) + VIDEO_ADDR);
     int size = MAX_COLS * (MAX_ROWS - 1) * 2;
     memory_copy(source, dest, size);
 

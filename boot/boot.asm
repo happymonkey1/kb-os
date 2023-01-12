@@ -2,17 +2,20 @@
 %include "boot/multiboot_header.asm"
 KERNEL_OFFSET equ 0x1000
 
-mov [BOOT_DRIVE], dl ; Remember that the BIOS sets us the boot drive in 'dl' on boot
-mov bp, 0x9000
-mov sp, bp
+jmp 0:main_boot
 
-mov bx, MSG_16BIT_MODE
-call print16
-call print16_nl
+main_boot:
+    mov [BOOT_DRIVE], dl ; Remember that the BIOS sets us the boot drive in 'dl' on boot
+    mov bp, 0x9000
+    mov sp, bp
 
-call load_kernel        ; read kernel from disk
-call switch_to_32bit    ; disable interrupts, load GDT, etc. Finally jumps to BEGIN_32BIT
-jmp $;
+    mov bx, MSG_16BIT_MODE
+    call print16
+    call print16_nl
+
+    call load_kernel        ; read kernel from disk
+    call switch_to_32bit    ; disable interrupts, load GDT, etc. Finally jumps to BEGIN_32BIT
+    jmp $;
 
 %include "boot/print_16bit.asm"
 %include "boot/print_32bit.asm"

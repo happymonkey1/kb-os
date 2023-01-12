@@ -43,7 +43,7 @@ qemu: $(iso)
 		qemu-system-i386 -cdrom $(iso) -vga std -s -serial file:serial.log -no-reboot -d guest_errors,int -D log.log
 
 qemu-64: $(iso)
-		qemu-system-x86_64 -cdrom $(iso) -vga std -s -serial file:serial.log -no-reboot -d guest_errors,int -D log.log
+		qemu-system-x86_64 -cdrom $(iso) -vga std -s -serial file:serial.log -no-reboot -d guest_errors,int -D log.log 
 
 qemu-nox-64: $(iso)
 		qemu-system-x86_64 -m 128 -cdrom $(iso) -vga std -s -no-reboot -nographic 
@@ -66,7 +66,7 @@ $(iso): $(kernel) $(grub_cfg)
 		@rm -r build/isofiles
         
 $(kernel): $(c_object_files) $(assembly_object_files) $(linker_script)
-		ld -m elf_i386 -T $(linker_script) -o $(kernel) $(assembly_object_files) $(c_object_files)
+		ld -m elf_i386 -T $(linker_script) -o $(kernel) $(assembly_object_files) $(c_object_files) -Ttext 0x1000 
 
 # compile C files
 build/%.o: %.c
