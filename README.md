@@ -1,6 +1,6 @@
 # kb-os
 
-kbOS is a simple 32 bit proof-of-concept operating system. This project was done to explore assembly, C, and operating system development.
+kbOS is a simple, 32 bit proof-of-concept operating system. This project was done to explore assembly, C, and operating system development.
 
 ## Compilation and Running
 
