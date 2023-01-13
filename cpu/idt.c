@@ -15,11 +15,11 @@ idt_register_t idt_register;
 void set_idt_gate(int n, uint32_t handler)
 {
     idt[n].low_offset = LOW_16(handler);
-    idt[n].selector = 0x08;
+    idt[n].selector = KERNEL_GDT_SELECTOR;
     idt[n].always0 = 0;
     // 0x8E = 1001110
     // P    = 1
-    // DPL  = 00
+    // DPL  = 00 (ring zero)
     // 0    = 0
     // D    = 1
     // Type = 110

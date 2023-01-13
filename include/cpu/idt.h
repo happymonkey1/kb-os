@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 
+#define KERNEL_GDT_SELECTOR 0x24
+
 typedef struct
 {
     // low 16 bits that represents the memory address of the interrupt handler

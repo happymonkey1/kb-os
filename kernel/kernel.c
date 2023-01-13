@@ -16,18 +16,19 @@ int kernel_entry_point()
 
     // initialize interrupt services routine
     isr_install();
-    print_string("initialized interrupt service routines.\n");
-    serial_print_string("initialized interrupt service routines.\n");
 
-    irq_install();
+    print_string("initializing interrupt service routines.\n");
+    // enable external interrupts and install irqs
+    irq_install(); 
+    serial_print_string("initialized interrupt service routines.\n");
 
     print_string("welcome to kbOS.\n");
     serial_print_string("welcome to kbOS.\n");
 
     serial_print_string("testing interrupts.\n");
     // test interrupts
-    asm volatile("int $2");
-    asm volatile("int $3");
+   //asm volatile("int $2");
+    //asm volatile("int $3");
     serial_print_string("finished testing interrupts.\n");
 
     return 0;

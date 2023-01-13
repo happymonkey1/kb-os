@@ -2,6 +2,7 @@
     "files.associations": {
         "*.html": "html",
         "Makefile": "make",
-        "registers.h": "c"
+        "registers.h": "c",
+        "util.h": "c"
     }
 }

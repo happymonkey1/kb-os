@@ -4,6 +4,7 @@
 #include "../include/driver/vga_driver.h"
 #include "../include/driver/console.h" // serial driver
 #include "../include/driver/keyboard_driver.h"
+#include "../include/kernel/util.h"
 
 #define PRIMARY_PIC_COMMAND 0x20
 #define PRIMARY_PIC_DATA 0x21
@@ -93,6 +94,12 @@ void isr_install()
     set_idt_gate(31, (uint32_t) isr31);
     serial_print_string("finished installing isrs.\n");
 
+    // install dummy handlers for the remaining values
+    for (int i = IRQ15 + 1; i < 256; ++i)
+        set_idt_gate(i, (uint32_t)isr_dummy);
+
+    micro_delay();
+
     /* PIC remmaping */
 
     // 8259 PIC is repsonsible for managing hardware interrupts
@@ -150,6 +157,8 @@ void isr_install()
     port_byte_out(0x21, 0x0);
     port_byte_out(0xA1, 0x0);
     serial_print_string("finished PIC remapping.\n");
+
+    micro_delay();
 
     /* setting up IRQ handlers */
 
@@ -210,6 +219,9 @@ void isr_handler(registers_t* reg)
 
 void irq_handler(registers_t* reg)
 {
+    if (reg == NULL)
+        return;
+
     // secondary EOI
     if (reg->int_no >= 40)
         port_byte_out(SECONDARY_PIC_COMMAND, PRIMARY_PIC_COMMAND);

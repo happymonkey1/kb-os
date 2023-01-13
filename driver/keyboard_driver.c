@@ -4,8 +4,6 @@
 #include "../include/cpu/isr.h"
 #include "../include/driver/console.h" // this is serial console, should probably be renamed
 
-#define IRQ1 33
-
 const char* keyboard_driver_error_general = "ERR_KEYBOARD_DRIVER_GENERAL";
 
 void print_letter(uint8_t scan_code)

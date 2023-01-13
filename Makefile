@@ -9,7 +9,7 @@ CFLAGS = -fno-pic -static -fno-builtin -fno-strict-aliasing -O1 -Wall -MD -ggdb 
 
 target ?= kbOS
 
-assembly_source_files := $(wildcard boot/kernel_entry.asm *.asm cpu/*.asm driver/*.asm boot/boot.asm)
+assembly_source_files := $(wildcard boot/multiboot_header.asm boot/kernel_entry.asm *.asm cpu/*.asm driver/*.asm boot/boot.asm)
 assembly_object_files := $(patsubst %.asm, build/%.o, $(assembly_source_files))
 c_source_files := $(wildcard *.c cpu/*.c driver/*.c kernel/*.c)
 c_object_files := $(patsubst %.c, build/%.o, $(c_source_files))
@@ -66,7 +66,7 @@ $(iso): $(kernel) $(grub_cfg)
 		@rm -r build/isofiles
         
 $(kernel): $(c_object_files) $(assembly_object_files) $(linker_script)
-		ld -m elf_i386 -T $(linker_script) -o $(kernel) $(assembly_object_files) $(c_object_files) -Ttext 0x1000 
+		ld -m elf_i386 -T $(linker_script) -o $(kernel) $(assembly_object_files) $(c_object_files)
 
 # compile C files
 build/%.o: %.c
@@ -76,6 +76,6 @@ build/%.o: %.c
 # compile assembly files
 build/%.o: %.asm
 		@mkdir -p $(shell dirname $@)
-		nasm -felf32 $< -o $@
+		nasm -f elf32 $< -o $@
 
 .PHONY: default build run clean

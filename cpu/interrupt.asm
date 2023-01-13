@@ -93,6 +93,7 @@ global isr28
 global isr29
 global isr30
 global isr31
+global isr_dummy
 ; IRQs
 global irq0
 global irq1
@@ -295,6 +296,12 @@ isr30:
 isr31:
     push byte 0
     push byte 31
+    jmp isr_common_stub
+
+; dummy isr for values > 31
+isr_dummy:
+    push byte 32
+    push byte 0
     jmp isr_common_stub
 
 ; IRQ handlers

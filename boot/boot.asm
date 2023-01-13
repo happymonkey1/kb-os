@@ -1,8 +1,6 @@
+KERNEL_OFFSET equ 0x1000 ; kernel starts at 4kb mark
 
-%include "boot/multiboot_header.asm"
-KERNEL_OFFSET equ 0x1000
-
-jmp 0:main_boot
+jmp main_boot
 
 main_boot:
     mov [BOOT_DRIVE], dl ; Remember that the BIOS sets us the boot drive in 'dl' on boot
@@ -23,6 +21,7 @@ main_boot:
 %include "boot/gdt.asm"
 %include "boot/switch_to_32bit.asm"
 
+section .text
 [bits 16]
 load_kernel:
     mov bx, MSG_LOAD_KERNEL     ; load print message into reg
@@ -49,5 +48,5 @@ MSG_LOAD_KERNEL db "Loading kernel into memory", 0
 
 ; padding
 ; I have no idea what this is for
-times 510 - ($-$$) db 0
-dw 0xaa55
+; times 510 - ($-$$) db 0
+; dw 0xaa55

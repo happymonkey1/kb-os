@@ -6,7 +6,6 @@
 ;   a 'zero entry'
 ;   a 'code segment'
 ;   a 'data segment'
-align 4
 section .rodata
 gdt_start:  ; do not remove the labels, they are needed to compute sizes and jumps
     ; the GDT starts with a null 8-bytes
