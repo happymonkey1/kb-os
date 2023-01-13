@@ -24,7 +24,7 @@ void kb_str_append(char* src, char c);
 // =====
 
 // compute the len of a string
-size_t strlen(char* str);
+size_t strlen(const char* str);
 
 // check if two strings are equivalent
 int strcmp(const char* s1, const char* s2);

@@ -108,6 +108,20 @@ void free(void* mem)
     header = kb_merge_current_into_previous(header);
 }
 
+void* memcpy(void* dest, const void* src, size_t n)
+{
+    if (src == NULL || dest == NULL || n == 0)
+        return NULL;
+
+    // #TODO check headers to make sure we don't go out of bounds
+    
+    uint8_t* dest_casted = (uint8_t*)dest;
+    for (size_t i = 0; i < n; ++i)
+        dest_casted[i] = ((const uint8_t*)src)[i];
+    
+    return (void*)dest_casted;
+}
+
 // try merging next block into current block
 buddy_block_node_t* kb_buddy_block_alloc_merge_next_into_current(buddy_block_node_t* header)
 {

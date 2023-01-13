@@ -1,6 +1,10 @@
 #pragma once
 
+#include <stddef.h>
+
+// ==========================
 // linked list implementation
+// ==========================
 
 typedef struct ll_node
 {
@@ -19,4 +23,41 @@ void linked_list_free(ll_node_t** head);
 // append to the front of a linked list
 void linked_list_push_front(ll_node_t* head, void* data);
 
+// ==========================
 
+
+// =================================
+// doubly linked list implementation
+// =================================
+
+typedef struct dbll_node
+{
+    // data ptr
+    void* data;
+    // next node
+    struct dbll_node* next;
+    // prev node
+    struct dbll_node* prev;
+} dbll_node_t;
+
+typedef struct dbll_head
+{
+    dbll_node_t* head;
+    size_t size;
+} dbll_head_t;
+
+// initialize doubly linked list
+dbll_head_t doubly_linked_list_init();
+
+// free doubly linked list
+void doubly_linked_list_free(dbll_head_t dbll_head);
+
+// push to front of doubly linked list
+// data must be allocated on heap
+void doubly_linked_list_push_front(dbll_head_t dbll_head, void* data);
+
+// push to back of doubly linked list
+// data must be allocated on heap
+void doubly_linked_list_push_back(dbll_head_t dbll_head, void* data);
+
+// =================================

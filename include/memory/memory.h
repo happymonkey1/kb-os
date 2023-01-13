@@ -34,5 +34,10 @@ buddy_block_node_t* kb_merge_current_into_previous(buddy_block_node_t*);
 // initialize dynamic memory allocator
 void kb_dynamic_memory_init();
 
+// ===================
+// libc implementation
+// ===================
+
 void* malloc(size_t size);
 void free(void* mem);
+void* memcpy(void* dest, const void* src, size_t n);

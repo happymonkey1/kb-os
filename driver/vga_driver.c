@@ -1,5 +1,7 @@
 #include "../include/driver/vga_driver.h"
 
+#include <stddef.h>
+
 #define VGA_CTRL_REGISTER 0x3d4
 #define VGA_DATA_REGISTER 0x3d5
 #define VGA_OFFSET_LOW 0x0f
@@ -41,6 +43,9 @@ void set_char_at_video_memory(char character, int offset)
 
 void print_string(const char* str)
 {
+    if (str == NULL)
+        return;
+
     int offset = get_cursor();
     int i;
     char c;

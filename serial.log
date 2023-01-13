@@ -271,23 +271,123 @@ registered irq1 handler for keyboard callback
 initialized keyboard driver.
 finished setting up interrupt service routines.
 welcome to kbOS.
-testing interrupts.
-finished testing interrupts.
 irq handler 33called.
 keyboard callback called!irq handler 33called.
-keyboard callback called!unrecognized scan code 163.
+keyboard callback called!unrecognized scan code 161.
 irq handler 33called.
 keyboard callback called!irq handler 33called.
-keyboard callback called!unrecognized scan code 146.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 142.
 irq handler 33called.
 keyboard callback called!irq handler 33called.
-keyboard callback called!unrecognized scan code 166.
+keyboard callback called!unrecognized scan code 174.
+irq handler 33called.
+keyboard callback called!unrecognized scan code 160.
 irq handler 33called.
 keyboard callback called!irq handler 33called.
-keyboard callback called!unrecognized scan code 166.
+keyboard callback called!unrecognized scan code 185.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 161.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 150.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 174.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 165.
+irq handler 33called.
+keyboard callback called!parsing raw string to cmd struct.
+substr: cd
+allocated substr buffer of size=22
+substr: fuck
+allocated substr buffer of size=55
+irq handler 33called.
+keyboard callback called!unrecognized scan code 156.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 174.
+irq handler 33called.
+keyboard callback called!unrecognized scan code 160.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 185.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 161.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 150.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 174.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 165.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 181.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 149.
 irq handler 33called.
 keyboard callback called!irq handler 33called.
 keyboard callback called!unrecognized scan code 152.
 irq handler 33called.
+keyboard callback called!unrecognized scan code 150.
+irq handler 33called.
+keyboard callback called!parsing raw string to cmd struct.
+substr: cd
+allocated substr buffer of size=22
+substr: fuck/you
+allocated substr buffer of size=99
+irq handler 33called.
+keyboard callback called!unrecognized scan code 156.
+irq handler 33called.
 keyboard callback called!irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 174.
+irq handler 33called.
+keyboard callback called!unrecognized scan code 160.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 185.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 181.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 161.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 150.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 174.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 165.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 181.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 149.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 152.
+irq handler 33called.
+keyboard callback called!unrecognized scan code 150.
+irq handler 33called.
+keyboard callback called!parsing raw string to cmd struct.
+substr: cd
+allocated substr buffer of size=22
+substr: /fuck/you
+allocated substr buffer of size=1010
+irq handler 33called.
 keyboard callback called!unrecognized scan code 156.
