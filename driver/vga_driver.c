@@ -62,6 +62,13 @@ void print_string(const char* str)
     set_cursor(offset);
 }
 
+void print_backspace()
+{
+    int back_pos = get_cursor() - 2;
+    set_char_at_video_memory(' ', back_pos);
+    set_cursor(back_pos);
+}
+
 void print_new_line()
 {
     print_string("\n");

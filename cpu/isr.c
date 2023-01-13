@@ -5,6 +5,7 @@
 #include "../include/driver/console.h" // serial driver
 #include "../include/driver/keyboard_driver.h"
 #include "../include/kernel/util.h"
+#include "../include/libc/string.h"
 
 #define PRIMARY_PIC_COMMAND 0x20
 #define PRIMARY_PIC_DATA 0x21
@@ -229,14 +230,16 @@ void irq_handler(registers_t* reg)
     // primary EOI 
     port_byte_out(PRIMARY_PIC_COMMAND, PRIMARY_PIC_COMMAND); 
 
-    serial_print_string("irq handler called.\n");
     if (interrupt_handlers[reg->int_no] != 0)
     {
-        char s[3];
-        s[0] = reg->int_no + '0';
-        s[1] = '\n';
-        s[2] = 0;
+        // #TODO clean up this mess when stringf implemented
+        serial_print_string("irq handler ");
+        // max size is 256, meaning 3 digits + 1 for null terminator
+        char s[4];
+        kb_int_to_str(reg->int_no, s);
         serial_print_string(s);
+        serial_print_string("called.\n");
+
         isr_t handler = interrupt_handlers[reg->int_no];
         handler(reg);
     }
@@ -244,6 +247,12 @@ void irq_handler(registers_t* reg)
 
 void register_interrupt_handler(uint8_t n, isr_t handler)
 {
-    serial_print_string("registered interrupt handler.\n");
+    // #TODO clean up this mess when stringf implemented
+    char n_str[4];
+    kb_int_to_str(n, n_str);
+    serial_print_string("registered interrupt handler ");
+    serial_print_string(n_str);
+    serial_print_string(".\n");
+
     interrupt_handlers[n] = handler;
 }

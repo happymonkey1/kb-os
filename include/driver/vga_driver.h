@@ -12,6 +12,8 @@ void set_char_at_video_memory(char character, int offset);
 
 void print_string(const char* str);
 void print_new_line();
+// backspace on screen (print space at last cursor pos)
+void print_backspace();
 
 int get_row_from_offset(int offset);
 int get_offset(int col, int row);

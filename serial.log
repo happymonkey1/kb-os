@@ -1,274 +1,293 @@
 serial driver initialized.
 initialized vga driver.
 starting to install isrs.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
+idt gate  set.
+idt gate 1 set.
+idt gate 2 set.
+idt gate 3 set.
+idt gate 4 set.
+idt gate 5 set.
+idt gate 6 set.
+idt gate 7 set.
+idt gate 8 set.
+idt gate 9 set.
+idt gate 10 set.
+idt gate 11 set.
+idt gate 12 set.
+idt gate 13 set.
+idt gate 14 set.
+idt gate 15 set.
+idt gate 16 set.
+idt gate 17 set.
+idt gate 18 set.
+idt gate 19 set.
+idt gate 20 set.
+idt gate 21 set.
+idt gate 22 set.
+idt gate 23 set.
+idt gate 24 set.
+idt gate 25 set.
+idt gate 26 set.
+idt gate 27 set.
+idt gate 28 set.
+idt gate 29 set.
+idt gate 30 set.
+idt gate 31 set.
 finished installing isrs.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
+idt gate 48 set.
+idt gate 49 set.
+idt gate 50 set.
+idt gate 51 set.
+idt gate 52 set.
+idt gate 53 set.
+idt gate 54 set.
+idt gate 55 set.
+idt gate 56 set.
+idt gate 57 set.
+idt gate 58 set.
+idt gate 59 set.
+idt gate 60 set.
+idt gate 61 set.
+idt gate 62 set.
+idt gate 63 set.
+idt gate 64 set.
+idt gate 65 set.
+idt gate 66 set.
+idt gate 67 set.
+idt gate 68 set.
+idt gate 69 set.
+idt gate 70 set.
+idt gate 71 set.
+idt gate 72 set.
+idt gate 73 set.
+idt gate 74 set.
+idt gate 75 set.
+idt gate 76 set.
+idt gate 77 set.
+idt gate 78 set.
+idt gate 79 set.
+idt gate 80 set.
+idt gate 81 set.
+idt gate 82 set.
+idt gate 83 set.
+idt gate 84 set.
+idt gate 85 set.
+idt gate 86 set.
+idt gate 87 set.
+idt gate 88 set.
+idt gate 89 set.
+idt gate 90 set.
+idt gate 91 set.
+idt gate 92 set.
+idt gate 93 set.
+idt gate 94 set.
+idt gate 95 set.
+idt gate 96 set.
+idt gate 97 set.
+idt gate 98 set.
+idt gate 99 set.
+idt gate 100 set.
+idt gate 101 set.
+idt gate 102 set.
+idt gate 103 set.
+idt gate 104 set.
+idt gate 105 set.
+idt gate 106 set.
+idt gate 107 set.
+idt gate 108 set.
+idt gate 109 set.
+idt gate 110 set.
+idt gate 111 set.
+idt gate 112 set.
+idt gate 113 set.
+idt gate 114 set.
+idt gate 115 set.
+idt gate 116 set.
+idt gate 117 set.
+idt gate 118 set.
+idt gate 119 set.
+idt gate 120 set.
+idt gate 121 set.
+idt gate 122 set.
+idt gate 123 set.
+idt gate 124 set.
+idt gate 125 set.
+idt gate 126 set.
+idt gate 127 set.
+idt gate 128 set.
+idt gate 129 set.
+idt gate 130 set.
+idt gate 131 set.
+idt gate 132 set.
+idt gate 133 set.
+idt gate 134 set.
+idt gate 135 set.
+idt gate 136 set.
+idt gate 137 set.
+idt gate 138 set.
+idt gate 139 set.
+idt gate 140 set.
+idt gate 141 set.
+idt gate 142 set.
+idt gate 143 set.
+idt gate 144 set.
+idt gate 145 set.
+idt gate 146 set.
+idt gate 147 set.
+idt gate 148 set.
+idt gate 149 set.
+idt gate 150 set.
+idt gate 151 set.
+idt gate 152 set.
+idt gate 153 set.
+idt gate 154 set.
+idt gate 155 set.
+idt gate 156 set.
+idt gate 157 set.
+idt gate 158 set.
+idt gate 159 set.
+idt gate 160 set.
+idt gate 161 set.
+idt gate 162 set.
+idt gate 163 set.
+idt gate 164 set.
+idt gate 165 set.
+idt gate 166 set.
+idt gate 167 set.
+idt gate 168 set.
+idt gate 169 set.
+idt gate 170 set.
+idt gate 171 set.
+idt gate 172 set.
+idt gate 173 set.
+idt gate 174 set.
+idt gate 175 set.
+idt gate 176 set.
+idt gate 177 set.
+idt gate 178 set.
+idt gate 179 set.
+idt gate 180 set.
+idt gate 181 set.
+idt gate 182 set.
+idt gate 183 set.
+idt gate 184 set.
+idt gate 185 set.
+idt gate 186 set.
+idt gate 187 set.
+idt gate 188 set.
+idt gate 189 set.
+idt gate 190 set.
+idt gate 191 set.
+idt gate 192 set.
+idt gate 193 set.
+idt gate 194 set.
+idt gate 195 set.
+idt gate 196 set.
+idt gate 197 set.
+idt gate 198 set.
+idt gate 199 set.
+idt gate 200 set.
+idt gate 201 set.
+idt gate 202 set.
+idt gate 203 set.
+idt gate 204 set.
+idt gate 205 set.
+idt gate 206 set.
+idt gate 207 set.
+idt gate 208 set.
+idt gate 209 set.
+idt gate 210 set.
+idt gate 211 set.
+idt gate 212 set.
+idt gate 213 set.
+idt gate 214 set.
+idt gate 215 set.
+idt gate 216 set.
+idt gate 217 set.
+idt gate 218 set.
+idt gate 219 set.
+idt gate 220 set.
+idt gate 221 set.
+idt gate 222 set.
+idt gate 223 set.
+idt gate 224 set.
+idt gate 225 set.
+idt gate 226 set.
+idt gate 227 set.
+idt gate 228 set.
+idt gate 229 set.
+idt gate 230 set.
+idt gate 231 set.
+idt gate 232 set.
+idt gate 233 set.
+idt gate 234 set.
+idt gate 235 set.
+idt gate 236 set.
+idt gate 237 set.
+idt gate 238 set.
+idt gate 239 set.
+idt gate 240 set.
+idt gate 241 set.
+idt gate 242 set.
+idt gate 243 set.
+idt gate 244 set.
+idt gate 245 set.
+idt gate 246 set.
+idt gate 247 set.
+idt gate 248 set.
+idt gate 249 set.
+idt gate 250 set.
+idt gate 251 set.
+idt gate 252 set.
+idt gate 253 set.
+idt gate 254 set.
+idt gate 255 set.
 starting PIC remapping.
 finished PIC remapping.
 setting up irq handlers.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
-idt gate set.
+idt gate 32 set.
+idt gate 33 set.
+idt gate 34 set.
+idt gate 35 set.
+idt gate 36 set.
+idt gate 37 set.
+idt gate 38 set.
+idt gate 39 set.
+idt gate 40 set.
+idt gate 41 set.
+idt gate 42 set.
+idt gate 43 set.
+idt gate 44 set.
+idt gate 45 set.
+idt gate 46 set.
+idt gate 47 set.
 finished setting up irq handlers.
 loading idt.
 finished loading idt.
+setting up interrupt service routines.
 enabled external interrupts.
-registered interrupt handler.
+registered interrupt handler 33.
 registered irq1 handler for keyboard callback
 initialized keyboard driver.
-initialized interrupt service routines.
+finished setting up interrupt service routines.
 welcome to kbOS.
 testing interrupts.
 finished testing interrupts.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 163.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 146.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 166.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 166.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 152.
+irq handler 33called.
+keyboard callback called!irq handler 33called.
+keyboard callback called!unrecognized scan code 156.

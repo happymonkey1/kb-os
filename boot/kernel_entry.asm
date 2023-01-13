@@ -1,7 +1,7 @@
-global start
+global _start
 [bits 32]
 
-start:
+_start:
     [extern kernel_entry_point]
     call kernel_entry_point
     jmp $

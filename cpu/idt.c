@@ -1,6 +1,6 @@
 #include "../include/cpu/idt.h"
 #include "../include/driver/console.h" // serial driver
-
+#include "../include/libc/string.h"
 #include "../include/cpu/registers.h"
 
 // macros to get low and high bits from a 32 bit value
@@ -26,7 +26,12 @@ void set_idt_gate(int n, uint32_t handler)
     idt[n].flags = 0x8E;
     idt[n].high_offset = HIGH_16(handler);
 
-    serial_print_string("idt gate set.\n");
+    // #TODO fix this mess when stringf is implemented
+    serial_print_string("idt gate ");
+    char gate_str[4];
+    kb_int_to_str(n, gate_str);
+    serial_print_string(gate_str);
+    serial_print_string(" set.\n");
 }
 
 void load_idt()

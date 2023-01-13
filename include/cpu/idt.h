@@ -3,7 +3,9 @@
 
 #include <stdint.h>
 
-#define KERNEL_GDT_SELECTOR 0x24
+// linux kernel defines KERNEL_CS as 16, any other value doesn't work
+// why reinvent the wheel? took me ~8 hours to figure that out...
+#define KERNEL_GDT_SELECTOR 0x10
 
 typedef struct
 {

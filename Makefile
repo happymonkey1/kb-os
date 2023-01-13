@@ -11,7 +11,7 @@ target ?= kbOS
 
 assembly_source_files := $(wildcard boot/multiboot_header.asm boot/kernel_entry.asm *.asm cpu/*.asm driver/*.asm boot/boot.asm)
 assembly_object_files := $(patsubst %.asm, build/%.o, $(assembly_source_files))
-c_source_files := $(wildcard *.c cpu/*.c driver/*.c kernel/*.c)
+c_source_files := $(wildcard *.c cpu/*.c driver/*.c kernel/*.c libc/*.c shell/*.c memory/*.c)
 c_object_files := $(patsubst %.c, build/%.o, $(c_source_files))
 
 # from https://stackoverflow.com/a/52016618
@@ -66,7 +66,7 @@ $(iso): $(kernel) $(grub_cfg)
 		@rm -r build/isofiles
         
 $(kernel): $(c_object_files) $(assembly_object_files) $(linker_script)
-		ld -m elf_i386 -T $(linker_script) -o $(kernel) $(assembly_object_files) $(c_object_files)
+		ld -m elf_i386 -T $(linker_script) -o $(kernel) $(assembly_object_files) $(c_object_files) --entry _start
 
 # compile C files
 build/%.o: %.c

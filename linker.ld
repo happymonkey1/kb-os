@@ -2,7 +2,7 @@
 ENTRY(start)
 
 SECTIONS {
-    . = 0x1000; /* Tells GRUB to load the kernal starting at the 1MB mark */
+    . = 0x100000; /* Tells GRUB to load the kernal starting at the 1MB mark */
 
     .rodata :
     {
