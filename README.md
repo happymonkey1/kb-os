@@ -12,7 +12,8 @@ To compile
 ```
 make clean
 make iso
-make qemu
 ```
 
 Note: on windows, preprend wsl to `make clean` and `make iso`. nasm needs to be installed on your wsl installation.
+
+Execute `make qemu` to run
