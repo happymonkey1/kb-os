@@ -18,8 +18,6 @@ int kb_shell_mkdir(const char* p_path, mode_t mode)
     size_t dir_level = strcount(path.raw_path, '/');
     if (dir_level == 0)
         return -1;
-    
-    print_string("is_absolute ");
 
     if (is_absolute_path(&path))
         dir_level--;
@@ -54,7 +52,8 @@ int kb_shell_mkdir(const char* p_path, mode_t mode)
             directory_name_cache[count++] = substr;
         }
     }
-
+ 
+    // #TODO this should be based on the current directory if the mkdir path is relative
     file_t* cur = get_root_f();
     for (size_t i = 0; i < count; ++i)
     {
@@ -75,15 +74,10 @@ int kb_shell_mkdir(const char* p_path, mode_t mode)
             new_child_dir->name = substr;
 
             add_child(cur, new_child_dir);
-        }
-    }
 
-    print_string("mkdir found directories:\n");
-    for (size_t i = 0; i < count; ++i)
-    {
-        print_string("  ");
-        print_string(directory_name_cache[i]);
-        print_string("\n");
+            if (i < count - 1)
+                cur = new_child_dir;
+        }
     }
 
     // free allocated dir names

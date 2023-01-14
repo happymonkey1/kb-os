@@ -20,6 +20,7 @@ int kb_shell_ls(file_t* file_f)
     while (cur)
     {
         file_t* sub_dir = (file_t*)cur->data;
+        // #TODO check that file is valid
         print_string(sub_dir->name);
         print_new_line();
 

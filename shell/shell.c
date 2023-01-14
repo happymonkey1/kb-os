@@ -88,12 +88,15 @@ void kb_exec(const char* raw_cmd)
 {
     cmd_t cmd = parse_str_to_cmd(raw_cmd);
 
-    if (strcmp(cmd.cmd, "HALT") == 0)
+    // halt
+    if (strcmp(cmd.cmd, "halt") == 0)
     {
         free_cmd_struct(&cmd);
         print_string("stopping kernel.");
         asm volatile("hlt");
+        return;
     }
+    // cd
     else if (strcmp(cmd.cmd, CD_CMD_STR) == 0)
     {
         
@@ -106,6 +109,7 @@ void kb_exec(const char* raw_cmd)
                 print_string("cd failed to execute.\n");
         }
     }
+    // clear
     else if (strcmp(cmd.cmd, CLEAR_CMD_STR) == 0)
     {
         if (cmd.argc == 0)
@@ -113,6 +117,7 @@ void kb_exec(const char* raw_cmd)
         else
             print_string("clear command takes no arguments");
     }
+    // echo
     else if (strcmp(cmd.cmd, ECHO_CMD_STR) == 0)
     {
         if (cmd.argc != 1)
@@ -120,6 +125,7 @@ void kb_exec(const char* raw_cmd)
         else
             kb_shell_echo(cmd.argv[0]);
     }
+    // mkdir
     else if (strcmp(cmd.cmd, MKDIR_CMD_STR) == 0)
     {
         if (cmd.argc != 1)
@@ -127,9 +133,18 @@ void kb_exec(const char* raw_cmd)
         else
         {
             mode_t mode;
-            kb_shell_mkdir(cmd.argv[0], mode);
+            int ret = kb_shell_mkdir(cmd.argv[0], mode);
+            if (ret != 0)
+            {
+                serial_print_string("mkdir returned error code ");
+                char s[2];
+                kb_int_to_str(-ret, s);
+                serial_print_string(s);
+                serial_print_string("\n");
+            }
         }
     }
+    // ls
     else if (strcmp(cmd.cmd, LS_CMD_STR) == 0)
     {
         if (cmd.argc != 0)
@@ -145,8 +160,9 @@ void kb_exec(const char* raw_cmd)
     }
     
     kb_shell_print_prompt();
-
+    serial_print_string("freeing cmd struct.\n");
     free_cmd_struct(&cmd);
+    serial_print_string("done freeing cmd struct.\n");
 }
 
 // prints the current path and $ symbol to screen

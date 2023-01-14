@@ -28,12 +28,11 @@ int add_child(file_t* parent_f, file_t* child_f)
     if (contains_child(parent_f, child_f))
         return 0;
     
-    dbll_head_t dbll = parent_f->children;
-    doubly_linked_list_push_back(dbll, child_f);
+    doubly_linked_list_push_back(&parent_f->children, child_f);
 
     child_f->parent = parent_f;
     // #TODO check if file is directory
-    doubly_linked_list_push_back(parent_f->sub_dirs, child_f);
+    doubly_linked_list_push_back(&parent_f->sub_dirs, child_f);
 
     return 0;
 }

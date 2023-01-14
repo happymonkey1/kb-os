@@ -55,11 +55,11 @@ void doubly_linked_list_free(dbll_head_t dbll_head);
 
 // push to front of doubly linked list
 // data must be allocated on heap
-void doubly_linked_list_push_front(dbll_head_t dbll_head, void* data);
+void doubly_linked_list_push_front(dbll_head_t* dbll_head, void* data);
 
 // push to back of doubly linked list
 // data must be allocated on heap
-void doubly_linked_list_push_back(dbll_head_t dbll_head, void* data);
+void doubly_linked_list_push_back(dbll_head_t* dbll_head, void* data);
 
 // return pointer to node at a given index
 dbll_node_t* dbll_get_node_at_index(dbll_head_t dbll_head, size_t index);

@@ -68,7 +68,7 @@ void* malloc(size_t size)
     if (best_block != NULL)
     {
         // remove size of header
-        best_block->size = best_block->size - HEADER_SIZE;
+        best_block->size = best_block->size - HEADER_SIZE - size;
 
         // split block 
         buddy_block_node_t* allocated = (buddy_block_node_t*)(((uint8_t*)best_block) + HEADER_SIZE + best_block->size);
@@ -77,6 +77,7 @@ void* malloc(size_t size)
         allocated->size = size;
         allocated->next = best_block->next;
         allocated->prev = best_block;
+        allocated->used = true;
 
         // update doubly linked list in header
         if (best_block->next != NULL)
@@ -95,7 +96,7 @@ void free(void* mem)
     if (mem == NULL)
         return;
 
-    buddy_block_node_t* header = (buddy_block_node_t*)((uint8_t*)mem - HEADER_SIZE);
+    buddy_block_node_t* header = (buddy_block_node_t*)(((uint8_t*)mem) - HEADER_SIZE);
 
     // invalid header or memory was not dynamically allocated
     if (header == NULL)
