@@ -13,13 +13,19 @@ Required libraries
   - xorriso
 - wsl (windows only)
 
-To compile
+To compile on linux
 ```
 make clean
 make iso
 ```
 
-Note: on windows, preprend wsl to `make clean` and `make iso`. nasm needs to be installed on your wsl installation.
+To compile on Windows
+```
+wsl make clean
+wsl make iso
+```
+
+Note: Ensure `gcc`, `nasm`, `make`, `grub`, and `xorriso` are installed on your wsl image.
 
 Execute `make qemu` to run.
 
