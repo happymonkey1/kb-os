@@ -27,7 +27,7 @@ wsl make iso
 
 Note: Ensure `gcc`, `nasm`, `make`, `grub`, and `xorriso` are installed on your wsl image.
 
-Execute `make qemu` to run.
+Execute `make qemu` to run. 
 
 If the os does not boot or you see a CD-rom boot error 0004, run `sudo apt-get install grub-pc-bin`.
 
