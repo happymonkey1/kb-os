@@ -28,3 +28,9 @@ size_t strlen(const char* str);
 
 // check if two strings are equivalent
 int strcmp(const char* s1, const char* s2);
+
+// get substring from m to n-1
+char* substr(const char* src, int m, int n);
+
+// count number of occurences of char c in str
+size_t strcount(const char* src, char c);

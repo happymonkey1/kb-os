@@ -1,4 +1,5 @@
 #include "../include/libc/string.h"
+#include "../include/memory/memory.h"
 
 void kb_int_to_str(int num, char str_out[])
 {
@@ -56,4 +57,34 @@ int strcmp(const char* s1, const char* s2)
             return 0;
 
     return s1[i] - s2[i];
+}
+
+// get substring from m to n-1
+char* substr(const char* src, int m, int n)
+{
+    size_t dest_len = n - m;
+
+    char* dest_str = (char*)malloc(dest_len + 1);
+
+    for (int i = m; i < n && (*(src + i) != 0); ++i)
+    {
+        *dest_str = *(src + i);
+        ++dest_str;
+    }
+
+    *dest_str = 0;
+
+    return dest_str - dest_len;
+}
+
+// count number of occurences of char c in str
+size_t strcount(const char* src, char c)
+{
+    size_t str_len = strlen(src);
+    size_t count = 0;
+    for (size_t i = 0; i < str_len; ++i)
+        if (src[i] == c)
+            count++;
+    
+    return count;
 }

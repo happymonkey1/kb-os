@@ -71,3 +71,42 @@ void doubly_linked_list_push_back(dbll_head_t dbll_head, void* p_data)
     // update linked list data
     dbll_head.size++;
 }
+
+dbll_node_t* dbll_get_node_at_index(dbll_head_t dbll_head, size_t index)
+{
+    if (dbll_head.head == NULL)
+        return NULL;
+
+    if (index >= dbll_head.size)
+        return NULL;
+
+    dbll_node_t* cur = dbll_head.head;
+    size_t ind = 0;
+    while (cur)
+    {
+        if (ind == index)
+            return cur;
+        
+        ind++;
+        cur = cur->next;
+    }
+
+    return NULL;
+}
+
+dbll_node_t* dbll_find(dbll_head_t dbll_head, const void* data)
+{
+    if (dbll_head.head == NULL)
+        return NULL;
+
+    dbll_node_t* cur = dbll_head.head;
+    while (cur)
+    {
+        if (cur->data == data)
+            return cur;
+        
+        cur = cur->next;
+    }
+
+    return NULL;
+}

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stddef.h>
+#include <stdbool.h>
 
 // ==========================
 // linked list implementation
@@ -59,5 +60,12 @@ void doubly_linked_list_push_front(dbll_head_t dbll_head, void* data);
 // push to back of doubly linked list
 // data must be allocated on heap
 void doubly_linked_list_push_back(dbll_head_t dbll_head, void* data);
+
+// return pointer to node at a given index
+dbll_node_t* dbll_get_node_at_index(dbll_head_t dbll_head, size_t index);
+
+// return a pointer to an object within the list
+// compares pointer addresses
+dbll_node_t* dbll_find(dbll_head_t dbll_head, const void* data);
 
 // =================================

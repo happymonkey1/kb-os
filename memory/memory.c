@@ -101,6 +101,12 @@ void free(void* mem)
     if (header == NULL)
         return;
 
+    if (header->used == false)
+    {
+        serial_print_string("double free.\n");
+        return;
+    }
+
     header->used = false;
 
     // try merging blocks

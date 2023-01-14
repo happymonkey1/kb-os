@@ -39,7 +39,7 @@ int kernel_entry_point()
     serial_print_string("welcome to kbOS.\n");
 
     //path_t root = get_root();
-    path_t current_dir = get_current_dir();
+    path_t current_dir = get_current_dir_path();
     print_string(current_dir.raw_path);
     print_string("$ ");
 
